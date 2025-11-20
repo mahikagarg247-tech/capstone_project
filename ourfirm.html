@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Finzo – Our Firm</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+                background: #7db1d3;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 40px;
+                z-index: 1000;
+            }
+
+            .navbar .logo {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .navbar nav a {
+                margin: 0 20px;
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+            }
+
+            .navbar nav a:hover {
+                border-bottom: 2px solid black;
+            }
+
+            .login-btn {
+                border: 1px solid black;
+                background: transparent;
+                padding: 8px 15px;
+                cursor: pointer;
+            }
+
+            .login-btn:hover {
+                color: white;
+            }
+
+            .section {
+                padding: 120px 10% 60px;
+                background: #f5f7ff;
+                text-align: center;
+            }
+
+            .section h1 {
+                font-size: 42px;
+                margin-bottom: 15px;
+                font-weight: 700;
+                color: #222;
+            }
+
+            .section p {
+                max-width: 850px;
+                margin: 10px auto 40px;
+                font-size: 17px;
+                color: #444;
+                line-height: 1.6;
+            }
+
+            .firm-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+                margin-top: 40px;
+            }
+
+            .firm-card {
+                background: white;
+                padding: 25px;
+                border-radius: 14px;
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+                text-align: left;
+                transition: 0.3s ease;
+            }
+
+            .firm-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .firm-card h3 {
+                font-size: 22px;
+                color: #0d6efd;
+                margin-bottom: 10px;
+            }
+
+            .firm-card p {
+                font-size: 15px;
+                color: #555;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header class="navbar">
+            <div class="logo">Finzo</div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="whatwedo.html">What We Do</a>
+                <a href="insights.html">Insights</a>
+                <a href="ourfirm.html">Our Firm</a>
+                <a href="careers.html">Careers</a>
+            </nav>
+
+            <button class="login-btn">Client Login</button>
+        </header>
+
+        <section class="section">
+            <h1>About Our Firm</h1>
+            <p>
+                At Finzo, we are committed to empowering individuals and businesses by providing deep financial
+                insights,
+                cutting-edge digital solutions, and research-driven strategies. For over a decade, our mission has been
+                to
+                simplify finance through innovation, trust, and world-class expertise.
+            </p>
+
+            <div class="firm-container">
+
+                <div class="firm-card">
+                    <h3>Our Mission</h3>
+                    <p>
+                        To make financial knowledge accessible, actionable, and transformative.
+                        We aim to guide clients with transparent tools and reliable analysis.
+                    </p>
+                </div>
+
+                <div class="firm-card">
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become a global leader in financial innovation, helping people
+                        and businesses navigate an ever-changing economy with confidence.
+                    </p>
+                </div>
+
+                <div class="firm-card">
+                    <h3>Our Values</h3>
+                    <p>
+                        Integrity, accountability, innovation, and client-first thinking form
+                        the foundation of every service we provide.
+                    </p>
+                </div>
+
+                <div class="firm-card">
+                    <h3>Our Expertise</h3>
+                    <p>
+                        Our team consists of analysts, economists, and technologists working together
+                        to deliver insights across markets, fintech, global trade, and technology.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </body>
+
+    </html>
