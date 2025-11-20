@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinFlow – Global Payments</title>
+
+    <style>
+        /* -------------------- Global -------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f8f8;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            background: #ff7a00;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e96c00;
+        }
+
+        /* -------------------- Header -------------------- */
+        header {
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff7a00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav li {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background: transparent;
+            color: #ff7a00;
+            border: 2px solid #ff7a00;
+        }
+
+        .login-btn:hover {
+            background: #ff7a00;
+            color: white;
+        }
+
+        /* -------------------- Hero Section -------------------- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 60px;
+            background: #ffffff;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .hero-img img {
+            width: 500px;
+            max-width: 100%;
+        }
+
+        /* -------------------- Features Section -------------------- */
+        .features {
+            padding: 80px 60px;
+            background: #f1f1f1;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        /* -------------------- Pricing Section -------------------- */
+        .pricing {
+            padding: 80px 60px;
+            background: #ffffff;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .pricing-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .price-box {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 260px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-box:hover {
+            transform: scale(1.05);
+        }
+
+        .price-box h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .price-box p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* -------------------- CTA Section -------------------- */
+        .cta {
+            padding: 80px 60px;
+            text-align: center;
+            background: #ff7a00;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta button {
+            background: white;
+            color: #ff7a00;
+        }
+
+        .cta button:hover {
+            background: #ffe3cc;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer div {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        footer h4 {
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            display: block;
+            margin-bottom: 8px;
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        /* -------------------- Responsive -------------------- */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .feature-grid,
+            .pricing-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">FinFlow</div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Support</li>
+            </ul>
+        </nav>
+        <button class="login-btn">Login</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Global Payments Made Simple</h1>
+            <p>Send and receive international payments quickly, securely, and at the lowest fees.</p>
+            <button>Get Started</button>
+        </div>
+
+        <div class="hero-img">
+            <img src="https://via.placeholder.com/500x350" alt="Hero Image">
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose FinFlow?</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Global Access</h3>
+                <p>Get paid from anywhere in the world with local receiving accounts.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Low Fees</h3>
+                <p>Enjoy the lowest transaction and withdrawal fees in the industry.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Secure Transfers</h3>
+                <p>Bank-level security ensures your money stays safe.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2>Pricing</h2>
+
+        <div class="pricing-grid">
+            <div class="price-box">
+                <h3>Basic</h3>
+                <p>For freelancers and individuals</p>
+                <div class="price">$9/mo</div>
+                <button>Choose Plan</button>
+            </div>
+
+            <div class="price-box">
+                <h3>Standard</h3>
+                <p>For small to medium businesses</p>
+                <div class="price">$19/mo</div>
+                <button>Choose Plan</button>
+            </div>
+
+            <div class="price-box">
+                <h3>Premium</h3>
+                <p>For enterprises and large teams</p>
+                <div class="price">$49/mo</div>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call To Action -->
+    <section class="cta">
+        <h2>Ready to Grow Globally?</h2>
+        <p>Join millions of users worldwide using FinFlow to send and receive payments.</p>
+        <button>Sign Up Now</button>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4>FinFlow</h4>
+            <p>Your trusted gateway to global payments.</p>
+        </div>
+
+        <div>
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Contact</a>
+            <a href="#">Status</a>
+        </div>
+
+        <div>
+            <h4>Legal</h4>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Security</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
