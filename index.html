@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Finzo - Home</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
         }
-
-
-
 
         .navbar {
             position: fixed;
@@ -39,10 +38,12 @@
             margin: 0 20px;
             text-decoration: none;
             color: black;
-            font-size: 20px;
-
+            font-size: 16px;
         }
 
+        .navbar nav a:hover {
+            border-bottom: 2px solid black;
+        }
 
         .login-btn {
             border: 1px solid black;
@@ -52,28 +53,25 @@
         }
 
         .login-btn:hover {
-            color: white
+            color: white;
         }
-
 
         .hero {
             position: relative;
             width: 100%;
             height: 90vh;
-            overflow: hidden
+            overflow: hidden;
         }
 
         .hero-video {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
             z-index: -2;
         }
-
 
         .overlay {
             position: absolute;
@@ -95,7 +93,6 @@
 
         .hero-content h1 {
             font-size: 3rem;
-            font-family: serif;
             font-weight: 500;
             line-height: 1.2;
         }
@@ -116,39 +113,27 @@
             font-weight: 600;
             border-radius: 4px;
         }
-
-        .navbar nav a:hover {
-            border-bottom: 2px solid black;
-        }
     </style>
 </head>
 
 <body>
 
     <header class="navbar">
-
         <div class="logo">Finzo</div>
 
-
         <nav>
-
-            <a href="#">What We Do</a>
-            <a href="#">Insights</a>
-            <a href="#">Our Firm</a>
+            <a href="whatwedo.html">What We Do</a>
+            <a href="insights.html">Insights</a>
+            <a href="ourfirm.html">Our Firm</a>
             <a href="#">Careers</a>
-
-
-
         </nav>
-
 
         <button class="login-btn">Client Login</button>
     </header>
 
     <div class="hero">
         <video autoplay muted loop class="hero-video">
-            <source
-                src="https://media.istockphoto.com/id/1368838867/video/stock-market-abstract-finance-background-with-motion-graph-chart-bars-and-financial.mp4?s=mp4-640x640-is&k=20&c=Fk8BMlEpC_90T5zKErH-SJiT49XgXw2Ak8vNP8py6ko="
+            <source src="https://media.istockphoto.com/id/1368838867/video/stock-market-abstract-finance-background-with-motion-graph-chart-bars-and-financial.mp4?s=mp4-640x640-is&k=20&c=Fk8BMlEpC_90T5zKErH-SJiT49XgXw2Ak8vNP8py6ko="
                 type="video/mp4">
         </video>
 
@@ -161,13 +146,10 @@
                 analysis from our specialists on trading floors and independent research desks
                 around the world.
             </p>
-            <a href="#" class="btn">Explore Insights</a>
-
-
-
-
-
+            <a href="whatwedo.html" class="btn">Explore Insights</a>
         </div>
+    </div>
+
 </body>
 
 </html>
